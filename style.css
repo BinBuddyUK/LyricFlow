@@ -1,0 +1,118 @@
+body {
+  background: #181828;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 8px 80px 8px;
+}
+h1 {
+  text-align: center;
+  color: #ff4081;
+  margin-bottom: 18px;
+  font-size: 2.1em;
+  letter-spacing: 1px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.input-group input[type="file"] {
+  background: #23234a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+}
+.input-group input[type="text"] {
+  background: #23234a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1em;
+  outline: none;
+}
+.input-group input[type="text"]:focus {
+  border-color: #ff4081;
+}
+.button {
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+.button:active {
+  background: #e6005c;
+}
+.audio-player {
+  width: 100%;
+  margin: 18px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.karaoke-container {
+  background: #23234a;
+  border-radius: 12px;
+  padding: 18px 8px;
+  margin-top: 18px;
+  min-height: 180px;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  position: relative;
+}
+.karaoke-title {
+  color: #ffb300;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.karaoke-line {
+  font-size: 1.15em;
+  padding: 7px 0;
+  text-align: center;
+  border-radius: 6px;
+  margin: 2px 0;
+  transition: background 0.3s, color 0.3s, font-weight 0.3s;
+}
+.karaoke-line.current {
+  background: #ff4081;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.22em;
+  box-shadow: 0 0 8px #ff4081a0;
+}
+.karaoke-line.past {
+  color: #888;
+  opacity: 0.6;
+}
+.karaoke-line.future {
+  color: #f0f0f0;
+}
+.loading, .error {
+  text-align: center;
+  margin: 18px 0;
+  font-size: 1.1em;
+}
+.loading { color: #ffb300; }
+.error { color: #ff6b6b; }
+@media (max-width: 600px) {
+  .container { padding: 12px 2vw 80px 2vw; }
+  h1 { font-size: 1.5em; }
+  .karaoke-container { min-height: 120px; }
+}
